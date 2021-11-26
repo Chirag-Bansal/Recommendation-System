@@ -5,7 +5,10 @@ Created a recommendation system based on collaborative item filtering. Based on 
 For each of the user we find the list of items. Each item in this list has some items similar to it. So based on which we sort the candidate items and return the top recommendations
 
 ### Cosine Similarity
-We use cosine similarity for comparing the two vectors, which is defined as follows:
-\begin{equation}
-\cos ({\bf t},{\bf e})= {{\bf t} {\bf e} \over \|{\bf t}\| \|{\bf e}\|} = \frac{ \sum_{i=1}^{n}{{\bf t}_i{\bf e}_i} }{ \sqrt{\sum_{i=1}^{n}{({\bf t}_i)^2}} \sqrt{\sum_{i=1}^{n}{({\bf e}_i)^2}} }
-\end{equation}
+We use cosine similarity for comparing the two vectors. Cosine similarity measures the similarity between two vectors of an inner product space. It is measured by the cosine of the angle between two vectors and determines whether two vectors are pointing in roughly the same direction.
+
+### Jaccard Index
+The Jaccard index, also known as the Jaccard similarity coefficient, is a statistic used for gauging the similarity and diversity of sample sets.
+
+#### Differences between Cosine similarity and Jaccard Index
+The key difference between these two is that cosine similarity has a vector for each user with values equal to number of times a user bought that product whereas jaccard only uses set of items. The information about hpw many times each product is bought is lost. Which is also shown in the results - Cosine similarity gives a precision of 0.68 whereas Jaccard Index gives a similarity of 0.55
